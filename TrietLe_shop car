@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Supercar Gallery</title>
+
+<style>
+:root{
+  --bg:#0b0d12;
+  --card:#151922;
+  --accent:#e50914;
+  --text:#ffffff;
+  --muted:#9aa0aa;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #1a1f2b, #000);
+  color:var(--text);
+}
+
+header{
+  padding:40px 20px;
+  text-align:center;
+}
+header h1{
+  font-size:40px;
+  letter-spacing:2px;
+}
+header p{
+  color:var(--muted);
+  max-width:700px;
+  margin:10px auto 0;
+}
+
+.container{
+  width:95%;
+  max-width:1400px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  padding-bottom:60px;
+}
+
+.card{
+  background:linear-gradient(180deg,#1a1f2b,#0d111a);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,.6);
+  transition:.4s;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 30px 60px rgba(0,0,0,.9);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.info{
+  padding:18px;
+}
+.info h3{
+  margin:0;
+  font-size:20px;
+}
+.price{
+  color:#00e676;
+  font-weight:600;
+  margin:8px 0;
+}
+.desc{
+  font-size:14px;
+  color:var(--muted);
+}
+
+button{
+  width:100%;
+  padding:12px;
+  margin-top:12px;
+  background:linear-gradient(135deg,var(--accent),#ff3d3d);
+  border:none;
+  color:white;
+  font-size:15px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:.3s;
+}
+button:hover{
+  opacity:.85;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:var(--muted);
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🔥 LUXURY SUPERCAR GALLERY 🔥</h1>
+  <p>Bộ sưu tập 20 siêu xe đỉnh cao thế giới – Trải nghiệm đẳng cấp, sang trọng & tốc độ</p>
+</header>
+
+<div class="container">
+
+<!-- SUPERCARS -->
+<script>
+const cars = [
+["Bugatti Chiron","https://images.unsplash.com/photo-1617814076367-b759c7d7e738","150.000.000.000"],
+["Bugatti Mistral","https://images.unsplash.com/photo-1629737811486-8e9e08c8f63c","180.000.000.000"],
+["Koenigsegg Jesko","https://images.unsplash.com/photo-1630163549904-9b2c7d8e7dbe","120.000.000.000"],
+["Koenigsegg Regera","https://images.unsplash.com/photo-1614200187524-dc4b892acf16","110.000.000.000"],
+["Pagani Huayra","https://images.unsplash.com/photo-1603386329225-868f9b1d07b1","95.000.000.000"],
+["Pagani Utopia","https://images.unsplash.com/photo-1687263940348-43d6b1f5c8c1","130.000.000.000"],
+["Lamborghini Aventador SVJ","https://images.unsplash.com/photo-1617654112368-3079216f9a7d","80.000.000.000"],
+["Lamborghini Revuelto","https://images.unsplash.com/photo-1686903955204-bd986c6976e6","90.000.000.000"],
+["Ferrari SF90","https://images.unsplash.com/photo-1617814086901-87a4eab7b8d6","75.000.000.000"],
+["Ferrari LaFerrari","https://images.unsplash.com/photo-1621264448270-9ef00c2f5f0a","100.000.000.000"],
+["McLaren Speedtail","https://images.unsplash.com/photo-1629737811486-8e9e08c8f63c","85.000.000.000"],
+["McLaren P1","https://images.unsplash.com/photo-1617814076350-d2bb18b8c20f","70.000.000.000"],
+["Aston Martin Valkyrie","https://images.unsplash.com/photo-1623873544585-6fd0a7f3e8bb","95.000.000.000"],
+["Porsche 918 Spyder","https://images.unsplash.com/photo-1605559424843-9e4c0d22c2a4","65.000.000.000"],
+["Rimac Nevera","https://images.unsplash.com/photo-1617814085338-fc63e2a2f9a6","90.000.000.000"],
+["SSC Tuatara","https://images.unsplash.com/photo-1625072861873-2c6d3a5d99b5","120.000.000.000"],
+["Hennessey Venom F5","https://images.unsplash.com/photo-1603386329234-b82f7a2d53f4","125.000.000.000"],
+["Maserati MC20","https://images.unsplash.com/photo-1603386329225-868f9b1d07b1","40.000.000.000"],
+["Lotus Evija","https://images.unsplash.com/photo-1617814085753-b7c87c7e8a1c","95.000.000.000"],
+["BMW i8 Ultimate","https://images.unsplash.com/photo-1590362891991-f776e747a588","35.000.000.000"]
+];
+
+document.write(
+cars.map(c=>`
+<div class="card">
+  <img src="${c[1]}">
+  <div class="info">
+    <h3>${c[0]}</h3>
+    <div class="price">${c[2]} VND</div>
+    <div class="desc">Giá tham khảo – liên hệ để được tư vấn & đặt cọc</div>
+    <button onclick="contact('${c[0]}')">Liên hệ đặt mua</button>
+  </div>
+</div>
+`).join("")
+);
+</script>
+
+</div>
+
+<footer>
+© 2026 Luxury Supercar Gallery – Website giả lập trưng bày siêu xe cao cấp
+</footer>
+
+<script>
+function contact(car){
+  alert("Liên hệ tư vấn mua: " + car + "\nHotline: 09xx xxx xxx");
+}
+</script>
+
+</body>
+</html>
