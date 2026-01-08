@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrietLe Supercars - Siêu Xe Cao Cấp Việt Nam</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; background-color: #000; color: #fff; }
+        header { background-color: #111; padding: 20px; text-align: center; border-bottom: 2px solid #ffd700; }
+        header h1 { margin: 0; color: #ffd700; font-size: 2.5em; }
+        nav ul { list-style: none; padding: 0; margin: 10px 0 0; }
+        nav ul li { display: inline; margin: 0 15px; }
+        nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
+        nav ul li a:hover { color: #ffd700; }
+        .hero { background: url('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/revuelto/2023/03_29_revuelto/gate/revuelto_s_03_m.jpg') no-repeat center/cover; height: 600px; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); }
+        .hero-content { position: relative; z-index: 1; }
+        .hero h2 { font-size: 3.5em; margin: 0; color: #ffd700; }
+        .hero p { font-size: 1.8em; }
+        .collection { padding: 60px 20px; text-align: center; background: #111; }
+        .collection h2 { color: #ffd700; margin-bottom: 50px; font-size: 2.5em; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .car-card { background: #222; padding: 25px; border-radius: 15px; box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); transition: transform 0.3s; }
+        .car-card:hover { transform: scale(1.05); }
+        .car-card img { width: 100%; height: auto; border-radius: 10px; }
+        .car-card h3 { color: #ffd700; margin: 15px 0 10px; }
+        .car-card .price { font-size: 1.4em; color: #ffd700; font-weight: bold; }
+        .btn { display: inline-block; background: #ffd700; color: #000; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 20px; font-size: 1.2em; }
+        .btn:hover { background: #fff; }
+        .showroom { padding: 60px 20px; text-align: center; background: #000; }
+        .showroom h2 { color: #ffd700; margin-bottom: 50px; font-size: 2.5em; }
+        .showroom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .showroom-grid img { width: 100%; height: auto; border-radius: 15px; box-shadow: 0 0 15px rgba(255, 215, 0, 0.2); }
+        footer { background: #111; padding: 30px; text-align: center; border-top: 2px solid #ffd700; }
+        footer p { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TRIETLE SUPERCARS</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Bộ sưu tập</a></li>
+                <li><a href="#">Về chúng tôi</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Chinh phục tốc độ – Sở hữu đỉnh cao</h2>
+            <p>Siêu xe chính hãng & nhập khẩu độc quyền tại Việt Nam</p>
+        </div>
+    </section>
+
+    <section class="collection">
+        <h2>Bộ Sưu Tập Siêu Xe Nổi Bật</h2>
+        <div class="grid">
+            <div class="car-card">
+                <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/revuelto/2023/03_29_revuelto/gate/revuelto_01_m.jpg" alt="Lamborghini Revuelto">
+                <h3>Lamborghini Revuelto 2026</h3>
+                <p>Động cơ: Hybrid V12, 1.015 mã lực</p>
+                <p class="price">Từ 45.000.000.000 VND</p>
+                <a href="tel:0909123456" class="btn">Liên hệ đặt mua ngay</a>
+            </div>
+            <div class="car-card">
+                <img src="https://www.ferrari.com/sites/default/files/styles/gallery_full/public/2023-05/sf90_stradale_rosso_corsa.jpg?itok=5oN2vK9c" alt="Ferrari SF90 Stradale">
+                <h3>Ferrari SF90 Stradale</h3>
+                <p>Động cơ: Hybrid V8, 986 mã lực</p>
+                <p class="price">Từ 50.000.000.000 VND</p>
+                <a href="tel:0909123456" class="btn">Liên hệ đặt mua ngay</a>
+            </div>
+            <div class="car-card">
+                <img src="https://www.rolls-roycemotorcars.com/content/dam/rollsroyce/website/models/phantom/images/2023/phantom-series-ii/rr-phantom-series-ii-hero-desktop.jpg" alt="Rolls-Royce Phantom">
+                <h3>Rolls-Royce Phantom 2026</h3>
+                <p>Động cơ: V12 6.75L – Đỉnh cao xa xỉ</p>
+                <p class="price">Từ 60.000.000.000 VND</p>
+                <a href="tel:0909123456" class="btn">Liên hệ đặt mua ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="showroom">
+        <h2>Trải Nghiệm Showroom TrietLe – Đẳng Cấp Thượng Lưu</h2>
+        <div class="showroom-grid">
+            <img src="https://www.supercarblondie.com/wp-content/uploads/2023/08/luxury-car-showroom-1.jpg" alt="Showroom 1">
+            <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/dealerships/ho-chi-minh/01.jpg" alt="Showroom 2">
+            <img src="https://www.rolls-roycemotorcars.com/content/dam/rollsroyce/website/dealerships/ho-chi-minh-city/images/showroom-interior.jpg" alt="Showroom 3">
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>TrietLe Supercars</strong> | TP.HCM & Hà Nội</p>
+        <p>Hotline: 0909.xxx.xxx | Email: contact@trietle-supercars.vn</p>
+        <p>Tất cả siêu xe chính hãng, hỗ trợ tùy chỉnh Ad Personam/Bespoke. Liên hệ để xem xe thực tế!</p>
+    </footer>
+</body>
+</html>
