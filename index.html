@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Nước Hoa Chiết Chính Hãng</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+}
+.shop {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.price {
+  color: #e91e63;
+  font-weight: bold;
+}
+select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+button {
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: #333;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌸 NƯỚC HOA CHIẾT CHÍNH HÃNG 🌸</h1>
+
+<div class="shop">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f" alt="Dior Sauvage">
+    <h3>Dior Sauvage</h3>
+    <p class="price">Từ 250.000đ – 1.000.000đ</p>
+    <select>
+      <option>5ml – 250.000đ</option>
+      <option>10ml – 450.000đ</option>
+      <option>20ml – 800.000đ</option>
+      <option>30ml – 1.000.000đ</option>
+    </select>
+    <button onclick="buy()">MUA NGAY</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6" alt="YSL Y">
+    <h3>YSL Y EDP</h3>
+    <p class="price">Từ 220.000đ – 950.000đ</p>
+    <select>
+      <option>5ml – 220.000đ</option>
+      <option>10ml – 420.000đ</option>
+      <option>20ml – 750.000đ</option>
+      <option>30ml – 950.000đ</option>
+    </select>
+    <button onclick="buy()">MUA NGAY</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1585386959984-a41552231693" alt="Bleu De Chanel">
+    <h3>Bleu De Chanel</h3>
+    <p class="price">Từ 300.000đ – 1.000.000đ</p>
+    <select>
+      <option>5ml – 300.000đ</option>
+      <option>10ml – 500.000đ</option>
+      <option>20ml – 850.000đ</option>
+      <option>30ml – 1.000.000đ</option>
+    </select>
+    <button onclick="buy()">MUA NGAY</button>
+  </div>
+
+</div>
+
+<script>
+function buy() {
+  alert("Cảm ơn bạn đã đặt mua! Shop sẽ liên hệ sớm 💖");
+}
+</script>
+
+</body>
+</html>
